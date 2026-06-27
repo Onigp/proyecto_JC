@@ -1,0 +1,8 @@
+¿Qué es una variable?
+- Una varible es un elemento de la programacion que sirve para almacenar datos, muchas veces estos datos pueden cambiar y variar su contenido
+
+¿Para qué se utilizan las variables?
+- Se utilizan para poder guardar datos y poderlos usar en nuestro programa
+
+Mencionar tres ejemplos de información que podría almacenar una variable.
+- stings(nombres), int(edades), float(precios)
