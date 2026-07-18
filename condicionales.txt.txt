@@ -1,0 +1,8 @@
+¿Qué es un condicional?
+- Es una regla que se debe dar para que nuestro algoritmo siga al siguiente paso o tome una decision
+
+¿Para qué sirve?
+- Sirve para que nuestros probramas puedan ser dinamicos y poder responder a diferentes situaciones
+
+Describir una situación cotidiana donde se tome una decisión basada en una condición.
+- Si llueve, entonces llevo paraguas, sino, no llevarlo

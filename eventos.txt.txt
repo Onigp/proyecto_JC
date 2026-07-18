@@ -1,0 +1,8 @@
+¿Qué es un evento?
+- Un evento es alguna accion que desplega una accion
+
+¿Dónde se utilizan los eventos?
+- Se utilizan en la programacion web para interactuar con el navegador
+
+Describir tres ejemplos de eventos en aplicaciones o sitios web.
+- Mover el mouse, precionar una tecla, posicionar el mouse en un boton

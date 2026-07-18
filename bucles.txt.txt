@@ -1,0 +1,9 @@
+¿Qué es un bucle?
+- Un bucle es un segmento de codigo que hace que se repita una accion las veces que se le indique
+
+¿Para qué sirve?
+- Sirve para ejecutar de forma repetitiva una accion del codigo
+
+Describir una actividad repetitiva de la vida cotidiana que pueda representarse mediante un
+bucle.
+- Revolver 5 veces la cuchara al echar azucar en el cafe

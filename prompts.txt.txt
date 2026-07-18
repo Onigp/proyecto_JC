@@ -1,0 +1,8 @@
+¿Qué es un prompt?
+- Un prompt es una peticion que se le hace a un modelo de lenguaje para que pueda realizar lo que se le pide
+
+¿Por qué es importante escribir buenos prompts?
+- Es importante escribir un buen prompt, porque de esto depende el resultado que nos dara el modelo.
+
+Escribir tres recomendaciones para crear mejores prompts.
+- Darle un objetivo final, ofrecerle contexto, ser especifico con lo que se piede
