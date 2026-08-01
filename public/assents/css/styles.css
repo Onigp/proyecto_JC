@@ -77,6 +77,80 @@ img {
     border-radius: 4px;
 }
 
+#cotizar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #0d1117;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #243447;
+}
+
+#formularioPresupuesto {
+    display: grid;
+    gap: 1rem;
+}
+
+#formularioPresupuesto label {
+    color: #cfd8dc;
+    font-weight: 600;
+}
+
+#formularioPresupuesto input,
+#formularioPresupuesto select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #2d3a47;
+    border-radius: 6px;
+    background: #111827;
+    color: #e0e0e0;
+}
+
+#formularioPresupuesto input:focus,
+#formularioPresupuesto select:focus,
+#btnCotizar:focus {
+    outline: 2px solid #00d4ff;
+    outline-offset: 2px;
+}
+
+#btnCotizar {
+    cursor: pointer;
+    background: linear-gradient(135deg, #00d4ff, #26c6ff);
+    border: none;
+    padding: 0.95rem 1.25rem;
+    border-radius: 8px;
+    color: #0a1421;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#btnCotizar:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(0, 212, 255, 0.18);
+}
+
+#resultadoPresupuesto {
+    background: #0b1620;
+    border: 1px solid #194256;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+#resultadoPresupuesto.error {
+    border-color: #e85a5a;
+    background: #2e1414;
+}
+
+#mensajeResultado {
+    margin: 0;
+    color: #c8f4ff;
+}
+
+.hidden {
+    display: none;
+}
+
 /* Pie de página minimalista */
 footer {
     text-align: center;

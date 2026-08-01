@@ -49,6 +49,34 @@
                 <img src="public/assents/img/FortiGate-90G.png" alt="FortiGate-90G" width="300" height="200">
                 <h3>FortiGate-90G</h3>
             </article>
+
+            <div id="cotizar">
+                <h3>Solicitar Presupuesto</h3>
+                <form id="formularioPresupuesto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="11 2345 6789" required>
+
+                    <label for="servicios">Servicio de Interés:</label>
+                    <select id="servicios" name="servicio" required>
+                        <option value="consultoria">Consultoría en ciberseguridad</option>
+                        <option value="auditoria">Auditorías de seguridad</option>
+                        <option value="implementacion">Implementación de soluciones de seguridad</option>
+                        <option value="capacitacion">Capacitación y concienciación</option>
+                    </select>
+
+                    <button type="submit" id="btnCotizar">Solicitar Presupuesto</button>
+                </form>
+                <section id="resultadoPresupuesto" class="hidden">
+                    <h3>Resultado del Presupuesto</h3>
+                    <p id="mensajeResultado"></p>
+                </section>
+            </div>
         </section>
 
         <section id="acerca_de">
@@ -67,5 +95,6 @@
     <footer>
         <p>&copy; 2026 CyberGuard Pyme. Todos los derechos reservados.</p>
     </footer>
+<script src="public/assents/js/cotizacion.js"></script>
 </body>
 </html>
