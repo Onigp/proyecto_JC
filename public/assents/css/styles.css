@@ -272,8 +272,8 @@ footer {
     --olive-dark: #394232;
     --clay: #b96143;
     --line: #d6cdbf;
-    --serif: Georgia, 'Times New Roman', serif;
-    --sans: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    --serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+    --sans: 'DM Sans', 'Segoe UI', Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
