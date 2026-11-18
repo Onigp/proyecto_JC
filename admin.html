@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración | CyberGuard Pyme</title>
+  <link rel="stylesheet" href="public/assents/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">CG</span><span>CyberGuard <em>Pyme</em></span></a>
+    <nav aria-label="Navegación principal"><a href="index.html">Sitio</a><a href="index.html#catalogo">Catálogo</a></nav>
+  </header>
+  <main>
+    <section class="about-section" id="loginSection">
+      <div><p class="eyebrow">Área privada</p><h2>Ingresar al panel.</h2></div>
+      <form id="loginForm" class="contact-form">
+        <label for="usuario">Usuario</label><input id="usuario" autocomplete="username" required>
+        <label for="clave">Contraseña</label><input id="clave" type="password" autocomplete="current-password" required>
+        <button type="submit">Iniciar sesión</button>
+        <p id="loginError" role="alert"></p>
+      </form>
+    </section>
+    <section class="services-section hidden" id="panelSection">
+      <div class="section-intro"><p class="eyebrow">Panel administrativo</p><h2>Actividad reciente</h2></div>
+      <div class="catalog-grid" id="panelMetrics"></div>
+      <h3>Solicitudes de cotización</h3>
+      <div id="solicitudesLista" class="catalog-grid"></div>
+      <h3>Consultas de contacto</h3>
+      <div id="consultasLista" class="catalog-grid"></div>
+      <button class="contact-form button" id="cerrarSesion" type="button">Cerrar sesión</button>
+    </section>
+  </main>
+  <footer><p>&copy; 2026 CyberGuard Pyme. Seguridad clara para negocios reales.</p></footer>
+  <script>
+    var loginForm = document.getElementById("loginForm");
+    var loginSection = document.getElementById("loginSection");
+    var panelSection = document.getElementById("panelSection");
+    function renderPanel() {
+      var solicitudes = JSON.parse(localStorage.getItem("cyberguard_solicitudes") || "[]");
+      var consultas = JSON.parse(localStorage.getItem("cyberguard_consultas") || "[]");
+      document.getElementById("panelMetrics").innerHTML =
+        '<article class="catalog-card"><p class="service-number">Cotizaciones</p><h3>'+solicitudes.length+'</h3></article>'+
+        '<article class="catalog-card"><p class="service-number">Consultas</p><h3>'+consultas.length+'</h3></article>'+
+        '<article class="catalog-card"><p class="service-number">Estado</p><h3>Activo</h3></article>';
+      document.getElementById("solicitudesLista").innerHTML = solicitudes.length ? solicitudes.slice().reverse().map(function(s){
+        return '<article class="catalog-card"><p class="service-number">'+s.servicio+'</p><h3>'+s.nombre+'</h3><p>'+s.email+' · '+s.telefono+'</p><strong>$'+s.precio+' ARS</strong></article>';
+      }).join("") : '<article class="catalog-card"><p>No hay solicitudes registradas.</p></article>';
+      document.getElementById("consultasLista").innerHTML = consultas.length ? consultas.slice().reverse().map(function(c){
+        return '<article class="catalog-card"><p class="service-number">'+c.nombre+'</p><h3>'+c.email+'</h3><p>'+c.mensaje+'</p></article>';
+      }).join("") : '<article class="catalog-card"><p>No hay consultas registradas.</p></article>';
+      loginSection.classList.add("hidden");
+      panelSection.classList.remove("hidden");
+      sessionStorage.setItem("cyberguard_admin","1");
+    }
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      if (document.getElementById("usuario").value.trim() === "admin" && document.getElementById("clave").value === "cyberguard2026") renderPanel();
+      else document.getElementById("loginError").textContent = "Usuario o contraseña incorrectos.";
+    });
+    document.getElementById("cerrarSesion").addEventListener("click", function(){ sessionStorage.removeItem("cyberguard_admin"); location.reload(); });
+    if (sessionStorage.getItem("cyberguard_admin") === "1") renderPanel();
+  </script>
+</body>
+</html>

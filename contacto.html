@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | CyberGuard Pyme</title>
+  <link rel="stylesheet" href="public/assents/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">CG</span><span>CyberGuard <em>Pyme</em></span></a>
+    <nav aria-label="Navegación principal"><a href="index.html#catalogo">Catálogo</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a><a href="admin.html">Administración</a></nav>
+  </header>
+  <main>
+    <section class="contact-section">
+      <p class="eyebrow">Contacto</p><h2>Contanos cuál es tu necesidad.</h2>
+      <form id="contactoForm" class="contact-form">
+        <label for="contactoNombre">Nombre</label><input id="contactoNombre" name="nombre" required>
+        <label for="contactoEmail">Correo</label><input id="contactoEmail" name="email" type="email" required>
+        <label for="contactoMensaje">Mensaje</label><textarea id="contactoMensaje" name="mensaje" rows="5" required></textarea>
+        <button id="contactoEnviar" type="submit">Enviar consulta</button>
+      </form>
+      <p id="contactoEstado" class="hidden" role="status"></p>
+      <a class="contact-link" href="mailto:hola@cyberguardpyme.com">hola@cyberguardpyme.com <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer><p>&copy; 2026 CyberGuard Pyme. Seguridad clara para negocios reales.</p></footer>
+  <script>
+    document.getElementById("contactoForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var nombre = document.getElementById("contactoNombre").value.trim();
+      var email = document.getElementById("contactoEmail").value.trim();
+      var mensaje = document.getElementById("contactoMensaje").value.trim();
+      if (!nombre || !email || !mensaje) return;
+      var consultas = JSON.parse(localStorage.getItem("cyberguard_consultas") || "[]");
+      consultas.push({ nombre: nombre, email: email, mensaje: mensaje, fecha: new Date().toISOString() });
+      localStorage.setItem("cyberguard_consultas", JSON.stringify(consultas));
+      var estado = document.getElementById("contactoEstado");
+      estado.textContent = "Gracias, " + nombre + ". Tu consulta quedó registrada.";
+      estado.classList.remove("hidden");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

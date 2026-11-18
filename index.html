@@ -7,93 +7,135 @@
     <link rel="stylesheet" href="public/assents/css/styles.css">
 </head>
 <body>
-    <header><!-- Cabecera visual de la pagina -->
-        <h1>CyberGuard Pyme</h1>
-        <nav><!-- Navegación principal -->
-            <a href="#servicios">Servicios</a>
-            <a href="#acerca_de">Acerca de</a>
-            <a href="#contacto">Contacto</a>
+    <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="CyberGuard Pyme, inicio">
+            <span class="brand-mark">CG</span>
+            <span>CyberGuard <em>Pyme</em></span>
+        </a>
+        <nav aria-label="Navegación principal">
+            <a href="#catalogo">Catálogo</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="#acerca_de">Cómo trabajamos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="admin.html">Administración</a>
         </nav>
     </header>
-    <main> <!-- Contenido principal -->
-        <section id="hero">
-            <img src="public/assents/img/banner.png" alt="Banner" width="500" height="200">
-            <p>Bienvenido a CyberGuard Pyme, tu solución integral de seguridad informática.</p>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Seguridad que se entiende</p>
+                <h1>Tu negocio merece una puerta que cierre bien.</h1>
+                <p class="hero-lead">Ayudamos a pequeñas empresas a proteger sus cuentas, equipos y datos sin llenarles la oficina de alarmas ni de palabras difíciles.</p>
+                <a class="text-link" href="#cotizar">Hablemos de tu caso <span aria-hidden="true">↗</span></a>
+            </div>
+            <figure class="hero-image">
+                <img src="public/assents/img/banner.png" alt="Equipo de trabajo revisando la seguridad de una empresa" width="500" height="200">
+                <figcaption>Protección práctica para el trabajo de todos los días.</figcaption>
+            </figure>
         </section>
 
-        <section id="servicios">
-            <h2>Servicios</h2>
-            <ul>
-                <li>Consultoría en ciberseguridad</li>
-                <li>Auditorías de seguridad</li>
-                <li>Implementación de soluciones de seguridad</li>
-                <li>Capacitación y concienciación</li>
-            </ul>
-            <article>
-                <h3>Consultoría en ciberseguridad</h3>
-                <p>Ofrecemos asesoramiento experto para identificar y mitigar riesgos de seguridad en tu empresa.</p>
-            </article>
-            <article>
-                <h3>Auditorías de seguridad</h3>
-                <p>Realizamos auditorías exhaustivas para evaluar la postura de seguridad de tu organización.</p>
-            </article>
-            <article>
-                <h3>Implementación de soluciones de seguridad</h3>
-                <p>Diseñamos e implementamos soluciones personalizadas para proteger tus activos digitales.</p>
-            </article>
-            <article>
-                <h3>Capacitación y concienciación</h3>
-                <p>Brindamos programas de capacitación para mejorar la cultura de seguridad en tu organización.</p>
-            </article>
-            <article>
-                <img src="public/assents/img/FortiGate-90G.png" alt="FortiGate-90G" width="300" height="200">
-                <h3>FortiGate-90G</h3>
-            </article>
-
-            <div id="cotizar">
-                <h3>Solicitar Presupuesto</h3>
+        <section id="servicios" class="services-section">
+            <div class="section-intro">
+                <p class="eyebrow">En qué podemos ayudarte</p>
+                <h2>Menos sustos. Más control.</h2>
+                <p>No vendemos miedo. Revisamos los puntos débiles, ordenamos prioridades y dejamos a tu equipo con pasos claros.</p>
+            </div>
+            <div class="service-list">
+                <article class="service service-tall">
+                    <span class="service-number">01</span>
+                    <h3>Revisión de seguridad</h3>
+                    <p>Encontramos accesos abiertos, contraseñas repetidas y equipos que necesitan atención. Recibes un informe breve y una lista de acciones por prioridad.</p>
+                </article>
+                <article class="service service-offset">
+                    <span class="service-number">02</span>
+                    <h3>Protección de equipos y red</h3>
+                    <p>Configuramos las herramientas que tu negocio necesita y dejamos documentado cómo mantenerlas.</p>
+                </article>
+                <article class="service service-wide">
+                    <span class="service-number">03</span>
+                    <h3>Hábitos para el equipo</h3>
+                    <p>Una capacitación corta, con ejemplos reales de tu día a día, para que cada persona sepa qué revisar antes de hacer clic.</p>
+                </article>
+                <article class="product-note">
+                    <img src="public/assents/img/FortiGate-90G.png" alt="Dispositivo FortiGate 90G" width="300" height="200">
+                    <p>Cuando hace falta una red más ordenada, también te ayudamos a elegir y configurar el equipo adecuado.</p>
+                </article>
+            </div>
+            <details id="cotizar">
+                <summary><span class="summary-label">Cuéntanos qué necesitas</span><span aria-hidden="true">+</span></summary>
                 <form id="formularioPresupuesto">
-                    <label for="nombre">Nombre:</label>
+                    <label for="nombre">Tu nombre</label>
                     <input type="text" id="nombre" name="nombre" required>
-
-                    <label for="email">Correo Electrónico:</label>
+                    <label for="email">Correo de trabajo</label>
                     <input type="email" id="email" name="email" required>
-
-                    <label for="telefono">Teléfono:</label>
+                    <label for="telefono">Teléfono</label>
                     <input type="tel" id="telefono" name="telefono" placeholder="11 2345 6789" required>
-
-                    <label for="servicios">Servicio de Interés:</label>
+                    <label for="servicios">Qué te preocupa hoy</label>
                     <select id="servicios" name="servicio" required>
-                        <option value="consultoria">Consultoría en ciberseguridad</option>
-                        <option value="auditoria">Auditorías de seguridad</option>
-                        <option value="implementacion">Implementación de soluciones de seguridad</option>
-                        <option value="capacitacion">Capacitación y concienciación</option>
+                        <option value="consultoria">Quiero revisar mi situación</option>
+                        <option value="auditoria">Necesito una auditoría</option>
+                        <option value="implementacion">Quiero proteger mis equipos</option>
+                        <option value="capacitacion">Necesito capacitar al equipo</option>
                     </select>
-
-                    <button type="submit" id="btnCotizar">Solicitar Presupuesto</button>
+                    <button type="submit" id="btnCotizar">Pedir una orientación</button>
                 </form>
                 <section id="resultadoPresupuesto" class="hidden">
-                    <h3>Resultado del Presupuesto</h3>
+                    <h3>Esto es lo que podemos preparar</h3>
                     <p id="mensajeResultado"></p>
                 </section>
-            </div>
+            </details>
         </section>
 
-        <section id="acerca_de">
-            <h2>Acerca de</h2>
-            <p>CyberGuard Pyme es una empresa dedicada a proteger a las pequeñas y medianas empresas de amenazas cibernéticas. Nuestro equipo de expertos trabaja para garantizar la seguridad de tus datos y sistemas.</p>
-            <article>
-                <h3>Misión</h3>
-                <p>Proporcionar soluciones de seguridad informática accesibles y efectivas para pymes.</p>
-            </article>
-            <article>
-                <h3>Visión</h3>
-                <p>Ser líderes en ciberseguridad para pequeñas y medianas empresas, ofreciendo servicios de alta calidad y confianza.</p>
-            </article>
+        <section id="catalogo" class="catalog-section">
+            <div class="section-intro">
+                <p class="eyebrow">Catálogo Fortinet</p>
+                <h2>Equipos para crecer con seguridad.</h2>
+                <p>Soluciones seleccionadas para redes pequeñas y medianas. La configuración final depende de usuarios, ancho de banda y aplicaciones.</p>
+            </div>
+            <div class="catalog-grid" id="catalogoProductos" aria-live="polite"></div>
         </section>
+
+        <section id="acerca_de" class="about-section">
+            <div>
+                <p class="eyebrow">Una forma de trabajar</p>
+                <h2>Primero escuchamos. Después tocamos.</h2>
+            </div>
+            <div class="about-copy">
+                <p>CyberGuard Pyme nació para acompañar a negocios que necesitan cuidar su información, pero no cuentan con un departamento de sistemas.</p>
+                <p>Te explicamos qué pasa, cuánto cuesta arreglarlo y qué puedes dejar para después. Sin contratos confusos ni recomendaciones que no puedas sostener.</p>
+            </div>
+            <blockquote>“La seguridad no tiene que hacer más pesado el trabajo.”</blockquote>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <p class="eyebrow">¿Lo conversamos?</p>
+            <h2>Una pregunta concreta alcanza para empezar.</h2>
+            <a class="contact-link" href="mailto:hola@cyberguardpyme.com">hola@cyberguardpyme.com <span aria-hidden="true">↗</span></a>
+        </section>
+
+        <aside class="ai-assistant" aria-label="Asistente de seguridad">
+            <button class="ai-toggle" id="aiToggle" type="button" aria-expanded="false" aria-controls="aiPanel">
+                <span>Asistente IA</span>
+                <span aria-hidden="true">+</span>
+            </button>
+            <div class="ai-panel hidden" id="aiPanel">
+                <div class="ai-header">
+                    <strong>Consultor CyberGuard</strong>
+                    <button type="button" id="aiClose" aria-label="Cerrar asistente">Cerrar</button>
+                </div>
+                <div class="ai-messages" id="aiMessages" aria-live="polite">
+                    <p class="ai-message bot">Hola. Puedo orientarte sobre FortiGate, auditorías, capacitación y protección de red.</p>
+                </div>
+                <form id="aiForm">
+                    <label for="aiInput" class="hidden">Escribe tu consulta</label>
+                    <input id="aiInput" type="text" placeholder="¿Qué equipo necesito?" autocomplete="off" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </aside>
     </main>
     <footer>
-        <p>&copy; 2026 CyberGuard Pyme. Todos los derechos reservados.</p>
+        <p>&copy; 2026 CyberGuard Pyme. Seguridad clara para negocios reales.</p>
     </footer>
 <script src="public/assents/js/cotizacion.js"></script>
 </body>

@@ -1,24 +1,28 @@
-/* Estilos generales para un look moderno y seguro */
+/* Reglas base conservadas para compatibilidad con la estructura original. */
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Tipografía limpia y legible */
     line-height: 1.6; /* Mejora la legibilidad del texto */
     margin: 0;
-    background-color: #0a0e14; /* Fondo oscuro tipo "dark mode" tecnológico */
-    color: #e0e0e0; /* Texto gris claro para reducir fatiga visual */
+    background: #f4f0e8;
+    color: #25241f;
 }
 
-/* Cabecera con fondo sutil */
+/* Cabecera */
 header {
-    background: #161b22;
+    background: #f4f0e8;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #00d4ff; /* Borde azul neón para acentuar */
+    border-bottom: 1px solid #d6cdbf;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
 }
 
 nav a {
-    color: #00d4ff; /* Color de acento para enlaces */
+    color: #25241f;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
@@ -35,8 +39,10 @@ main {
 section {
     margin-bottom: 3rem;
     padding: 1.5rem;
-    background: #161b22;
+    background: transparent;
     border-radius: 8px; /* Bordes redondeados modernos */
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(48, 54, 61, 0.8);
 }
 
 /* Títulos con contraste */
@@ -45,9 +51,33 @@ h1 {
 }
 
 h2 {
-    color: #ffffff;
-    border-left: 4px solid #00d4ff;
+    color: #25241f;
+    border-left: 0;
     padding-left: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #25241f;
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.7fr);
+    gap: 2rem;
+    align-items: center;
+    background: transparent;
+}
+
+#hero img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: none;
+}
+
+#hero p {
+    font-size: 1.15rem;
+    color: #6b675e;
 }
 
 
@@ -62,12 +92,30 @@ h2 {
     grid-column: 1 / -1; /* Ocupa todo el ancho */
 }
 
+#servicios > ul {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.65rem 1.5rem;
+    padding: 1rem 1.5rem 1rem 2rem;
+    margin: 0;
+    color: #6b675e;
+    background: #e9e1d4;
+    border-left: 3px solid #59654b;
+}
+
 /* Tarjetas de artículos */
 article {
-    background: #0d1117;
+    background: transparent;
     padding: 1rem;
     border-radius: 6px;
     border: 1px solid #30363d;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-3px);
+    border-color: #59654b;
 }
 
 /* Imágenes responsivas */
@@ -81,10 +129,48 @@ img {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background: #0d1117;
-    padding: 1.5rem;
+    background: #f4f0e8;
+    padding: 0;
     border-radius: 8px;
     border: 1px solid #243447;
+    overflow: hidden;
+    grid-column: 1 / -1;
+    background: #f4f0e8;
+}
+
+#cotizar summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 1.25rem 1.5rem;
+    color: #25241f;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+#cotizar summary::-webkit-details-marker {
+    display: none;
+}
+
+#cotizar summary span {
+    float: right;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+#cotizar[open] summary {
+    background: #e9e1d4;
+    border-bottom: 1px solid #d6cdbf;
+}
+
+#cotizar[open] summary span {
+    transform: rotate(45deg);
+}
+
+#cotizar > form,
+#cotizar > #resultadoPresupuesto {
+    margin: 1.5rem;
 }
 
 #formularioPresupuesto {
@@ -93,7 +179,7 @@ img {
 }
 
 #formularioPresupuesto label {
-    color: #cfd8dc;
+    color: #6b675e;
     font-weight: 600;
 }
 
@@ -101,50 +187,50 @@ img {
 #formularioPresupuesto select {
     width: 100%;
     padding: 0.85rem 1rem;
-    border: 1px solid #2d3a47;
-    border-radius: 6px;
-    background: #111827;
-    color: #e0e0e0;
+    border: 1px solid #d6cdbf;
+    border-radius: 0;
+    background: #f4f0e8;
+    color: #25241f;
 }
 
 #formularioPresupuesto input:focus,
 #formularioPresupuesto select:focus,
 #btnCotizar:focus {
-    outline: 2px solid #00d4ff;
+    outline: 2px solid #b96143;
     outline-offset: 2px;
 }
 
 #btnCotizar {
     cursor: pointer;
-    background: linear-gradient(135deg, #00d4ff, #26c6ff);
+    background: #b96143;
     border: none;
     padding: 0.95rem 1.25rem;
     border-radius: 8px;
-    color: #0a1421;
+    color: #fffaf3;
     font-weight: 700;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #btnCotizar:hover {
     transform: translateY(-1px);
-    box-shadow: 0 12px 24px rgba(0, 212, 255, 0.18);
+    box-shadow: none;
 }
 
 #resultadoPresupuesto {
-    background: #0b1620;
-    border: 1px solid #194256;
+    background: #e9e1d4;
+    border: 1px solid #d6cdbf;
     border-radius: 8px;
     padding: 1.25rem;
 }
 
 #resultadoPresupuesto.error {
-    border-color: #e85a5a;
-    background: #2e1414;
+    border-color: #b96143;
+    background: #f1d8cc;
 }
 
 #mensajeResultado {
     margin: 0;
-    color: #c8f4ff;
+    color: #6b675e;
 }
 
 .hidden {
@@ -156,5 +242,164 @@ footer {
     text-align: center;
     padding: 2rem;
     font-size: 0.9rem;
-    color: #8b949e;
+    color: #6b675e;
+}
+
+@media (max-width: 650px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+
+    #hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Identidad editorial de CyberGuard Pyme */
+:root {
+    --paper: #f4f0e8;
+    --paper-deep: #e9e1d4;
+    --ink: #25241f;
+    --muted: #6b675e;
+    --olive: #59654b;
+    --olive-dark: #394232;
+    --clay: #b96143;
+    --line: #d6cdbf;
+    --serif: Georgia, 'Times New Roman', serif;
+    --sans: 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); line-height: 1.65; margin: 0; background: var(--paper); color: var(--ink); }
+.site-header { max-width: 1180px; margin: 0 auto; padding: 1.4rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); background: var(--paper); }
+.brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--ink); text-decoration: none; font-family: var(--serif); font-size: 1.2rem; }
+.brand em { color: var(--clay); font-style: italic; }
+.brand-mark { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; background: var(--olive); color: var(--paper); font: 700 .7rem var(--sans); letter-spacing: .08em; }
+nav { display: flex; gap: 1.8rem; }
+nav a, .text-link, .contact-link { color: var(--ink); text-decoration: none; font-size: .82rem; letter-spacing: .04em; }
+nav a:hover, .text-link:hover, .contact-link:hover { color: var(--clay); }
+main { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+section { margin: 0; padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--ink); }
+h1 { max-width: 700px; margin: .7rem 0 1.4rem; font-size: clamp(3.3rem, 7vw, 6.8rem); line-height: .96; letter-spacing: -.04em; }
+h2 { margin: .5rem 0 1rem; font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1; letter-spacing: -.03em; }
+h3 { margin: .8rem 0; font-size: 1.65rem; line-height: 1.1; }
+p { margin: 0 0 1rem; }
+.eyebrow, .service-number { margin: 0; color: var(--clay); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.hero { min-height: 680px; padding: 8rem 0 7rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .75fr); column-gap: 7rem; align-items: center; position: relative; }
+.hero-copy { position: relative; z-index: 1; }
+.hero-lead { max-width: 470px; margin-bottom: 2rem; color: var(--muted); font-size: 1.12rem; }
+.text-link, .contact-link { display: inline-flex; gap: .8rem; padding-bottom: .3rem; border-bottom: 1px solid var(--clay); font-weight: 700; }
+.text-link span, .contact-link span { color: var(--clay); }
+.hero-image { margin: 0; align-self: center; }
+.hero-image img { display: block; width: 100%; height: auto; min-height: 0; object-fit: contain; border-radius: 0 0 0 3rem; filter: sepia(.22) saturate(.75); }
+figcaption { max-width: 210px; margin: 1rem 0 0 auto; color: var(--muted); font-family: var(--serif); font-size: .95rem; font-style: italic; }
+.hero-note { grid-column: 1 / -1; justify-self: end; max-width: 260px; margin: 2rem 8% 0 0; color: var(--muted); font-size: .85rem; }
+.hero-note strong { display: block; margin-bottom: .3rem; color: var(--clay); font-family: var(--serif); font-size: 1.7rem; font-weight: 400; }
+.services-section { padding: 7rem 0; border-top: 1px solid var(--line); }
+.section-intro { max-width: 520px; margin-left: 10%; }
+.section-intro > p:last-child { max-width: 390px; color: var(--muted); }
+.service-list { margin-top: 4rem; display: grid; grid-template-columns: 1.05fr .75fr 1fr; gap: 1rem; align-items: start; }
+article.service, .product-note { padding: 2rem; border: 1px solid var(--line); border-radius: 0; background: transparent; transition: background .2s ease, transform .2s ease; }
+article.service:hover { transform: translateY(-.35rem); border-color: var(--olive); background: var(--paper-deep); }
+.service-tall { min-height: 300px; background: var(--olive-dark) !important; color: var(--paper); }
+.service-tall h3 { color: var(--paper); }
+.service-tall .service-number { color: #d99a7f; }
+.service-offset { margin-top: 5rem; min-height: 230px; }
+.service-wide { min-height: 270px; }
+.service p { color: var(--muted); }
+.service-tall p { color: #d4d8ca; }
+.product-note { grid-column: 2 / 4; display: grid; grid-template-columns: .8fr 1fr; gap: 1.5rem; align-items: center; margin-top: -1.5rem; background: var(--paper-deep); }
+.product-note img { width: 100%; mix-blend-mode: multiply; }
+.product-note p { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 1.15rem; }
+#cotizar { grid-column: 1 / -1; margin-top: 6rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); overflow: hidden; }
+#cotizar summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem 0; color: var(--ink); font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.5rem); }
+#cotizar summary::-webkit-details-marker { display: none; }
+#cotizar summary > span[aria-hidden="true"] { flex: 0 0 auto; float: none; color: var(--clay); font: 400 2.2rem/1 var(--sans); transform: none !important; transition: none; }
+#cotizar .summary-label { display: inline-block; float: none; color: var(--ink); font: 400 clamp(1.7rem, 3vw, 2.5rem)/1.1 var(--serif); transform: none !important; transition: none; }
+#cotizar[open] summary { border-bottom: 1px solid var(--line); }
+#cotizar[open] summary > span[aria-hidden="true"] { transform: none !important; }
+#cotizar[open] .summary-label { transform: none !important; }
+#cotizar > form, #cotizar > #resultadoPresupuesto { max-width: 680px; margin: 2rem 0; }
+#formularioPresupuesto { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem 1.5rem; }
+#formularioPresupuesto label { color: var(--muted); font-size: .82rem; }
+#formularioPresupuesto input, #formularioPresupuesto select { width: 100%; margin-bottom: .6rem; padding: .75rem 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; outline: 0; background: transparent; color: var(--ink); font: 1rem var(--sans); }
+#formularioPresupuesto input:focus, #formularioPresupuesto select:focus { border-color: var(--clay); }
+#btnCotizar { align-self: end; margin-top: 1rem; padding: .9rem 1.2rem; border: 0; border-radius: 0; background: var(--clay); color: #fffaf3; cursor: pointer; font: 700 .85rem var(--sans); }
+#btnCotizar:hover { background: var(--olive-dark); }
+#resultadoPresupuesto { padding: 1.3rem; background: var(--paper-deep); }
+#resultadoPresupuesto h3 { margin-top: 0; font-size: 1.35rem; }
+#mensajeResultado { margin: 0; color: var(--muted); }
+.about-section { padding: 9rem 10% 8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; border-bottom: 1px solid var(--line); }
+.about-copy { max-width: 420px; color: var(--muted); }
+blockquote { grid-column: 1 / -1; max-width: 760px; margin: 1rem auto 0; color: var(--olive-dark); font: italic 2rem/1.2 var(--serif); text-align: center; }
+.contact-section { padding: 8rem 0; text-align: center; }
+.contact-section h2 { max-width: 700px; margin: .7rem auto 2rem; }
+.contact-link { font-family: var(--serif); font-size: 1.25rem; }
+footer { max-width: 1180px; margin: 0 auto; padding: 1.5rem 2rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .75rem; }
+.hidden { display: none; }
+@media (max-width: 760px) {
+    .site-header, main, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
+    .site-header { align-items: flex-start; gap: 1rem; }
+    nav { gap: .8rem; flex-wrap: wrap; justify-content: flex-end; }
+    .hero { min-height: auto; padding: 5rem 0 6rem; display: block; }
+    h1 { font-size: clamp(3rem, 15vw, 5rem); }
+    .hero-image { max-width: 450px; margin: 3rem 0 0 auto; }
+    .hero-note { margin: 2rem 0 0 auto; }
+    .services-section, .contact-section { padding: 5rem 0; }
+    .section-intro, .about-section { margin-left: 0; }
+    .service-list { display: block; margin-top: 2.5rem; }
+    article.service, .product-note { margin: 0 0 1rem; min-height: 0; }
+    .product-note { display: block; }
+    .product-note img { max-height: 180px; object-fit: contain; }
+    #cotizar { margin-top: 4rem; }
+    #formularioPresupuesto, .about-section { display: block; }
+    #formularioPresupuesto label, #formularioPresupuesto input, #formularioPresupuesto select { display: block; }
+    #btnCotizar { width: 100%; }
+    .about-section { padding: 6rem 0; }
+    .about-copy { margin-top: 2rem; }
+    blockquote { margin-top: 3rem; font-size: 1.6rem; }
+}
+
+/* Aire adicional para la cotización */
+#cotizar > form, #cotizar > #resultadoPresupuesto { margin: 2rem 2.5rem 2.5rem; }
+#cotizar > form { padding: 0 .5rem; }
+@media (max-width: 760px) {
+    #cotizar > form, #cotizar > #resultadoPresupuesto { margin-right: 1.2rem; margin-left: 1.2rem; }
+}
+
+.catalog-section { padding: 7rem 0; border-top: 1px solid var(--line); }
+.catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3.5rem; }
+.catalog-card { min-height: 250px; display: flex; flex-direction: column; padding: 1.7rem; border: 1px solid var(--line); background: transparent; }
+.catalog-card p:not(.service-number) { color: var(--muted); flex: 1; }
+.catalog-card strong { color: var(--clay); }
+.ai-assistant { position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 50; width: min(350px, calc(100vw - 2.4rem)); }
+.ai-toggle { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: .9rem 1rem; border: 0; background: var(--olive-dark); color: #fff; cursor: pointer; }
+.ai-panel { background: var(--paper); border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(37,36,31,.18); }
+.ai-header { display: flex; justify-content: space-between; align-items: center; padding: .8rem 1rem; border-bottom: 1px solid var(--line); }
+.ai-header button { border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+.ai-messages { height: 220px; overflow-y: auto; padding: 1rem; }
+.ai-message { max-width: 85%; margin-bottom: .7rem; padding: .65rem .75rem; border-radius: .35rem; font-size: .88rem; }
+.ai-message.bot { background: var(--paper-deep); }
+.ai-message.user { margin-left: auto; background: var(--olive-dark); color: #fff; }
+.ai-panel form { display: grid; grid-template-columns: 1fr auto; gap: .5rem; padding: .8rem; border-top: 1px solid var(--line); }
+.ai-panel input { min-width: 0; padding: .7rem; border: 1px solid var(--line); background: #fff; }
+.ai-panel form button { border: 0; background: var(--clay); color: #fff; cursor: pointer; }
+.contact-form { max-width: 680px; margin: 0 auto 2.5rem; display: grid; gap: .8rem; text-align: left; }
+.contact-form label { color: var(--muted); font-size: .82rem; }
+.contact-form input, .contact-form textarea { width: 100%; padding: .85rem; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: 1rem var(--sans); }
+.contact-form button { padding: .95rem; border: 0; background: var(--clay); color: #fff; cursor: pointer; font-weight: 700; }
+#contactoEstado { max-width: 680px; margin: 0 auto 1.5rem; padding: 1rem; background: var(--paper-deep); }
+@media (max-width: 760px) {
+    .catalog-grid { grid-template-columns: 1fr; }
+    .catalog-section { padding: 5rem 0; }
+    .ai-assistant { bottom: .7rem; right: .7rem; width: calc(100vw - 1.4rem); }
 }

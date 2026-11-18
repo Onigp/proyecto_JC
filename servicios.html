@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | CyberGuard Pyme</title>
+  <link rel="stylesheet" href="public/assents/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">CG</span><span>CyberGuard <em>Pyme</em></span></a>
+    <nav aria-label="Navegación principal"><a href="index.html#catalogo">Catálogo</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a><a href="admin.html">Administración</a></nav>
+  </header>
+  <main>
+    <section class="services-section">
+      <div class="section-intro">
+        <p class="eyebrow">Servicios</p>
+        <h2>Protección adecuada, sin complicaciones.</h2>
+      </div>
+      <div class="catalog-grid">
+        <article class="catalog-card"><p class="service-number">01</p><h3>Auditoría inicial</h3><p>Revisión de cuentas, equipos, red y accesos con informe priorizado.</p><strong>Desde $2.000 ARS</strong></article>
+        <article class="catalog-card"><p class="service-number">02</p><h3>Implementación Fortinet</h3><p>Selección, configuración y documentación de FortiGate, Wi-Fi y switches.</p><strong>Desde $3.000 ARS</strong></article>
+        <article class="catalog-card"><p class="service-number">03</p><h3>Capacitación del equipo</h3><p>Taller práctico para reconocer fraudes, proteger cuentas y reportar incidentes.</p><strong>Desde $1.000 ARS</strong></article>
+      </div>
+      <details id="cotizar"><summary><span class="summary-label">Solicitar una orientación</span><span aria-hidden="true">+</span></summary>
+        <form id="formularioPresupuesto">
+          <label for="nombre">Tu nombre</label><input id="nombre" name="nombre" required>
+          <label for="email">Correo</label><input id="email" name="email" type="email" required>
+          <label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" required>
+          <label for="servicios">Servicio</label><select id="servicios" name="servicio"><option value="consultoria">Consultoría</option><option value="auditoria">Auditoría</option><option value="implementacion">Implementación</option><option value="capacitacion">Capacitación</option></select>
+          <button id="btnCotizar" type="submit">Enviar solicitud</button>
+        </form>
+        <section id="resultadoPresupuesto" class="hidden"><h3>Solicitud registrada</h3><p id="mensajeResultado"></p></section>
+      </details>
+    </section>
+  </main>
+  <footer><p>&copy; 2026 CyberGuard Pyme. Seguridad clara para negocios reales.</p></footer>
+  <script src="public/assents/js/cotizacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "cyberguard-pyme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio comercial y portal administrativo de CyberGuard Pyme",
+  "scripts": {
+    "start": "node backend/server.js"
+  }
+}
