@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-labelledby="title">
+  <title id="title">Ilustración de un firewall de red</title>
+  <rect width="360" height="200" rx="8" fill="#e9e1d4"/>
+  <ellipse cx="180" cy="157" rx="124" ry="12" fill="#cfc5b5"/>
+  <path d="M66 79 91 55h175l28 24v68H66z" fill="#f8f6f1" stroke="#394232" stroke-width="3"/>
+  <path d="M66 79h228v68H66z" fill="#d9d7d0" stroke="#394232" stroke-width="3"/>
+  <path d="m66 79 25-24h175l28 24z" fill="#fffdf8" stroke="#394232" stroke-width="3"/>
+  <circle cx="87" cy="113" r="3" fill="#b96143"/>
+  <circle cx="99" cy="113" r="3" fill="#59654b"/>
+  <g fill="#394232">
+    <rect x="123" y="101" width="21" height="20" rx="2"/>
+    <rect x="151" y="101" width="21" height="20" rx="2"/>
+    <rect x="179" y="101" width="21" height="20" rx="2"/>
+    <rect x="207" y="101" width="21" height="20" rx="2"/>
+    <rect x="235" y="101" width="21" height="20" rx="2"/>
+  </g>
+  <g fill="#8b897f">
+    <rect x="127" y="106" width="13" height="10" rx="1"/>
+    <rect x="155" y="106" width="13" height="10" rx="1"/>
+    <rect x="183" y="106" width="13" height="10" rx="1"/>
+    <rect x="211" y="106" width="13" height="10" rx="1"/>
+    <rect x="239" y="106" width="13" height="10" rx="1"/>
+  </g>
+  <path d="M110 135h140" stroke="#c6c2b9" stroke-width="3" stroke-linecap="round"/>
+</svg>

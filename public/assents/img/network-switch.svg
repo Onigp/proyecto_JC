@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-labelledby="title">
+  <title id="title">Ilustración de un switch de red</title>
+  <rect width="360" height="200" rx="8" fill="#e9e1d4"/>
+  <ellipse cx="180" cy="151" rx="130" ry="12" fill="#cfc5b5"/>
+  <path d="m53 83 28-23h198l28 23v61H53z" fill="#d5d3cc" stroke="#394232" stroke-width="3"/>
+  <path d="M53 83h254v61H53z" fill="#f8f6f1" stroke="#394232" stroke-width="3"/>
+  <path d="m53 83 28-23h198l28 23z" fill="#fffdf8" stroke="#394232" stroke-width="3"/>
+  <g fill="#394232">
+    <rect x="75" y="101" width="19" height="21" rx="2"/><rect x="101" y="101" width="19" height="21" rx="2"/>
+    <rect x="127" y="101" width="19" height="21" rx="2"/><rect x="153" y="101" width="19" height="21" rx="2"/>
+    <rect x="179" y="101" width="19" height="21" rx="2"/><rect x="205" y="101" width="19" height="21" rx="2"/>
+    <rect x="231" y="101" width="19" height="21" rx="2"/><rect x="257" y="101" width="19" height="21" rx="2"/>
+  </g>
+  <g fill="#8b897f">
+    <rect x="79" y="106" width="11" height="11" rx="1"/><rect x="105" y="106" width="11" height="11" rx="1"/>
+    <rect x="131" y="106" width="11" height="11" rx="1"/><rect x="157" y="106" width="11" height="11" rx="1"/>
+    <rect x="183" y="106" width="11" height="11" rx="1"/><rect x="209" y="106" width="11" height="11" rx="1"/>
+    <rect x="235" y="106" width="11" height="11" rx="1"/><rect x="261" y="106" width="11" height="11" rx="1"/>
+  </g>
+  <circle cx="67" cy="132" r="3" fill="#b96143"/>
+</svg>

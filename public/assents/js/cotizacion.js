@@ -40,18 +40,19 @@ if (formularioPresupuesto) {
 }
 
 var catalogo = [
-    { nombre: "FortiGate 40F", categoria: "Pyme", descripcion: "Seguridad compacta para sucursales y oficinas pequeñas.", precio: "Cotización" },
-    { nombre: "FortiGate 60F", categoria: "Pyme", descripcion: "Protección SD-WAN y alto rendimiento para equipos en crecimiento.", precio: "Cotización" },
-    { nombre: "FortiGate 90G", categoria: "Empresarial", descripcion: "Firewall de nueva generación para redes exigentes y múltiples sedes.", precio: "Cotización" },
-    { nombre: "FortiAP", categoria: "Wi-Fi seguro", descripcion: "Red inalámbrica administrada con autenticación y segmentación.", precio: "Cotización" },
-    { nombre: "FortiSwitch", categoria: "Conectividad", descripcion: "Switch administrado integrado con FortiGate para control centralizado.", precio: "Cotización" },
-    { nombre: "FortiToken", categoria: "Identidad", descripcion: "Autenticación de dos factores para proteger cuentas críticas.", precio: "Cotización" }
+    { nombre: "FortiGate 40F", categoria: "Pyme", descripcion: "Seguridad compacta para sucursales y oficinas pequeñas.", precio: "Cotización", imagen: "public/assents/img/firewall-appliance.svg" },
+    { nombre: "FortiGate 60F", categoria: "Pyme", descripcion: "Protección SD-WAN y alto rendimiento para equipos en crecimiento.", precio: "Cotización", imagen: "public/assents/img/firewall-appliance.svg" },
+    { nombre: "FortiGate 90G", categoria: "Empresarial", descripcion: "Firewall de nueva generación para redes exigentes y múltiples sedes.", precio: "Cotización", imagen: "public/assents/img/FortiGate-90G.png" },
+    { nombre: "FortiAP", categoria: "Wi-Fi seguro", descripcion: "Red inalámbrica administrada con autenticación y segmentación.", precio: "Cotización", imagen: "public/assents/img/access-point.svg" },
+    { nombre: "FortiSwitch", categoria: "Conectividad", descripcion: "Switch administrado integrado con FortiGate para control centralizado.", precio: "Cotización", imagen: "public/assents/img/network-switch.svg" },
+    { nombre: "FortiToken", categoria: "Identidad", descripcion: "Autenticación de dos factores para proteger cuentas críticas.", precio: "Cotización", imagen: "public/assents/img/security-token.svg" }
 ];
 
 var catalogoContenedor = document.getElementById("catalogoProductos");
 if (catalogoContenedor) {
     catalogoContenedor.innerHTML = catalogo.map(function (producto) {
         return '<article class="catalog-card">' +
+            '<div class="catalog-image-wrap"><img class="catalog-product-image" src="' + producto.imagen + '" alt="Ilustración de ' + producto.nombre + '" loading="lazy"></div>' +
             '<p class="service-number">' + producto.categoria + '</p>' +
             '<h3>' + producto.nombre + '</h3>' +
             '<p>' + producto.descripcion + '</p>' +

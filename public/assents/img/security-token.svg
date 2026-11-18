@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-labelledby="title">
+  <title id="title">Ilustración de un dispositivo de autenticación segura</title>
+  <rect width="360" height="200" rx="8" fill="#e9e1d4"/>
+  <ellipse cx="180" cy="155" rx="65" ry="10" fill="#cfc5b5"/>
+  <rect x="133" y="43" width="94" height="104" rx="14" fill="#d5d3cc" stroke="#394232" stroke-width="3"/>
+  <rect x="143" y="54" width="74" height="82" rx="8" fill="#fffdf8" stroke="#b8b6ae" stroke-width="2"/>
+  <rect x="154" y="65" width="52" height="23" rx="3" fill="#394232"/>
+  <text x="180" y="82" fill="#e9e1d4" font-family="Arial,sans-serif" font-size="12" text-anchor="middle">482 916</text>
+  <circle cx="160" cy="104" r="4" fill="#59654b"/><circle cx="180" cy="104" r="4" fill="#59654b"/><circle cx="200" cy="104" r="4" fill="#59654b"/>
+  <circle cx="160" cy="121" r="4" fill="#b96143"/><circle cx="180" cy="121" r="4" fill="#59654b"/><circle cx="200" cy="121" r="4" fill="#59654b"/>
+</svg>
