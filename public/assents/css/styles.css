@@ -376,6 +376,140 @@ footer { max-width: 1180px; margin: 0 auto; padding: 1.5rem 2rem 2.5rem; border-
     #cotizar > form, #cotizar > #resultadoPresupuesto { margin-right: 1.2rem; margin-left: 1.2rem; }
 }
 
+/* Composición editorial de la sección de servicios */
+#servicios {
+    display: grid;
+    grid-template-columns: 235px minmax(0, 1fr);
+    column-gap: 1.5rem;
+    position: relative;
+    min-height: 650px;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+
+#servicios .section-intro {
+    grid-column: 1;
+    position: static;
+    width: 235px;
+    margin: 0;
+}
+
+#servicios .section-intro h2 {
+    max-width: 210px;
+    font-size: clamp(2.7rem, 4.5vw, 4.2rem);
+    line-height: .92;
+    margin: .7rem 0 1.4rem;
+}
+
+#servicios .section-intro > p:last-child {
+    max-width: 195px;
+    font-size: .78rem;
+    line-height: 1.7;
+}
+
+#servicios .service-list {
+    grid-column: 2;
+    max-width: 720px;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .9rem;
+    align-items: start;
+}
+
+#servicios article.service,
+#servicios .product-note {
+    padding: 1.3rem 1.15rem;
+}
+
+#servicios .service-tall {
+    min-height: 300px;
+}
+
+#servicios .service-offset {
+    margin-top: 2.8rem;
+    min-height: 260px;
+}
+
+#servicios .service-wide {
+    min-height: 260px;
+}
+
+#servicios article.service h3 {
+    font-size: 1.25rem;
+    line-height: 1.05;
+}
+
+#servicios article.service p {
+    font-size: .72rem;
+    line-height: 1.55;
+}
+
+#servicios .product-note {
+    grid-column: 2 / 4;
+    min-height: 185px;
+    margin-top: -1.8rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+}
+
+#servicios .product-note p {
+    font-size: .9rem;
+    line-height: 1.55;
+}
+
+#servicios #cotizar {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    margin-top: 3.5rem;
+}
+
+@media (max-width: 760px) {
+    #servicios {
+        display: block;
+        min-height: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    #servicios .section-intro {
+        position: static;
+        width: auto;
+        max-width: 520px;
+    }
+
+    #servicios .section-intro h2 {
+        max-width: 420px;
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    #servicios .section-intro > p:last-child {
+        max-width: 390px;
+    }
+
+    #servicios .service-list {
+        max-width: none;
+        margin: 2.5rem 0 0;
+        display: block;
+    }
+
+    #servicios .service-offset,
+    #servicios .service-wide,
+    #servicios .product-note {
+        margin: 0 0 1rem;
+    }
+
+    #servicios .product-note {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #servicios #cotizar {
+        margin-top: 4rem;
+    }
+}
+
 .catalog-section { padding: 7rem 0; border-top: 1px solid var(--line); }
 .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3.5rem; }
 .catalog-card { min-height: 250px; display: flex; flex-direction: column; padding: 1.7rem; border: 1px solid var(--line); background: transparent; }
