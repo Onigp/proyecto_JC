@@ -47,7 +47,7 @@
         '<article class="catalog-card"><p class="service-number">Consultas</p><h3>'+consultas.length+'</h3></article>'+
         '<article class="catalog-card"><p class="service-number">Estado</p><h3>Activo</h3></article>';
       document.getElementById("solicitudesLista").innerHTML = solicitudes.length ? solicitudes.slice().reverse().map(function(s){
-        return '<article class="catalog-card"><p class="service-number">'+s.servicio+'</p><h3>'+s.nombre+'</h3><p>'+s.email+' · '+s.telefono+'</p><strong>$'+s.precio+' ARS</strong></article>';
+        return '<article class="catalog-card"><p class="service-number">'+s.servicio+'</p><h3>'+s.nombre+'</h3><p>'+s.email+' · '+s.telefono+'</p><strong>$'+s.precio+'</strong></article>';
       }).join("") : '<article class="catalog-card"><p>No hay solicitudes registradas.</p></article>';
       document.getElementById("consultasLista").innerHTML = consultas.length ? consultas.slice().reverse().map(function(c){
         return '<article class="catalog-card"><p class="service-number">'+c.nombre+'</p><h3>'+c.email+'</h3><p>'+c.mensaje+'</p></article>';

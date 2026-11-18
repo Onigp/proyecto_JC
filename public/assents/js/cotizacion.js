@@ -30,7 +30,7 @@ if (formularioPresupuesto) {
         }
 
         var precio = precios[servicio] || 1500;
-        mostrarResultado("Gracias, " + nombre + ". Para este primer paso estimamos $" + precio + " ARS. Tu solicitud quedó registrada y te escribiremos a " + email + ".", false);
+        mostrarResultado("Gracias, " + nombre + ". Para este primer paso estimamos $" + precio + ". Tu solicitud quedó registrada y te escribiremos a " + email + ".", false);
 
         var solicitudes = JSON.parse(localStorage.getItem("cyberguard_solicitudes") || "[]");
         solicitudes.push({ nombre: nombre, email: email, telefono: telefono, servicio: servicio, precio: precio, fecha: new Date().toISOString() });
