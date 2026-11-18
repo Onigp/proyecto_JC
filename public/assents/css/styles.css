@@ -865,9 +865,10 @@ footer { max-width: 1180px; margin: 0 auto; padding: 1.5rem 2rem 2.5rem; border-
 
 #servicios .service-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: 275px 170px;
+    grid-template-rows: 335px 170px;
     max-width: 730px;
     gap: 1rem;
+    align-items: start;
 }
 
 #servicios .service-tall,
