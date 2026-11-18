@@ -510,6 +510,135 @@ footer { max-width: 1180px; margin: 0 auto; padding: 1.5rem 2rem 2.5rem; border-
     }
 }
 
+/* Ajuste visual final: mantiene la sección alineada a la composición original */
+#servicios {
+    grid-template-columns: 250px minmax(0, 1fr);
+    column-gap: 2.25rem;
+    align-items: start;
+    min-height: 760px;
+    padding: 5.5rem 0 4rem;
+}
+
+#servicios .section-intro {
+    width: 250px;
+    margin: 0;
+}
+
+#servicios .section-intro h2 {
+    max-width: 220px;
+    margin: .65rem 0 1.35rem;
+    font-size: 3.35rem;
+}
+
+#servicios .section-intro > p:last-child {
+    max-width: 225px;
+    font-size: .82rem;
+    line-height: 1.7;
+}
+
+#servicios .service-list {
+    grid-column: 2;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 700px;
+    min-height: 430px;
+    gap: 1rem;
+}
+
+#servicios .service-tall {
+    min-height: 390px;
+}
+
+#servicios .service-offset {
+    min-height: 300px;
+    margin-top: 3.25rem;
+}
+
+#servicios .service-wide {
+    min-height: 340px;
+}
+
+#servicios article.service {
+    padding: 1.25rem 1.1rem;
+}
+
+#servicios article.service h3 {
+    max-width: 170px;
+    font-size: 1.35rem;
+}
+
+#servicios article.service p {
+    font-size: .78rem;
+    line-height: 1.55;
+}
+
+#servicios .product-note {
+    grid-column: 2 / 4;
+    min-height: 210px;
+    margin-top: -2.75rem;
+    padding: 1.25rem 1.1rem;
+}
+
+#servicios .product-note img {
+    max-height: 155px;
+    object-fit: contain;
+}
+
+#servicios .product-note p {
+    font-size: .92rem;
+    line-height: 1.5;
+}
+
+#servicios #cotizar {
+    margin-top: 2.25rem;
+}
+
+@media (max-width: 760px) {
+    #servicios {
+        display: block;
+        min-height: 0;
+    }
+
+    #servicios .section-intro,
+    #servicios .section-intro h2,
+    #servicios .section-intro > p:last-child {
+        width: auto;
+        max-width: 420px;
+    }
+
+    #servicios .section-intro h2 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    #servicios .service-list {
+        max-width: none;
+        min-height: 0;
+    }
+
+    #servicios .service-tall,
+    #servicios .service-offset,
+    #servicios .service-wide {
+        min-height: 0;
+    }
+
+    #servicios .service-offset,
+    #servicios .service-wide,
+    #servicios .product-note {
+        margin: 0 0 1rem;
+    }
+
+    #servicios .product-note {
+        display: grid;
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+}
+
+@media (max-width: 1199px) {
+    .ai-assistant {
+        display: none;
+    }
+}
+
 .catalog-section { padding: 7rem 0; border-top: 1px solid var(--line); }
 .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3.5rem; }
 .catalog-card { min-height: 250px; display: flex; flex-direction: column; padding: 1.7rem; border: 1px solid var(--line); background: transparent; }
