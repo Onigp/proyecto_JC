@@ -282,7 +282,11 @@ body { font-family: var(--sans); line-height: 1.65; margin: 0; background: var(-
 .site-header { max-width: 1180px; margin: 0 auto; padding: 1.4rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); background: var(--paper); }
 .brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--ink); text-decoration: none; font-family: var(--serif); font-size: 1.2rem; }
 .brand em { color: var(--clay); font-style: italic; }
-.brand-mark { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; background: var(--olive); color: var(--paper); font: 700 .7rem var(--sans); letter-spacing: .08em; }
+.brand-mark { display: grid; place-items: center; flex: 0 0 2.7rem; width: 2.7rem; height: 2.7rem; background: var(--olive-dark); color: var(--paper); }
+.brand-mark svg { display: block; width: 2.35rem; height: 2.35rem; overflow: visible; }
+.brand-shield, .brand-lock { fill: none; stroke: var(--paper); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.brand-keyhole { fill: var(--clay); stroke: var(--clay); stroke-linecap: round; stroke-width: 1.5; }
+.brand-spark { fill: none; stroke: var(--clay); stroke-linecap: round; stroke-width: 1.8; }
 nav { display: flex; gap: 1.8rem; }
 nav a, .text-link, .contact-link { color: var(--ink); text-decoration: none; font-size: .82rem; letter-spacing: .04em; }
 nav a:hover, .text-link:hover, .contact-link:hover { color: var(--clay); }
